@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" href="images/favicon (2).png">
 </head>
 <body>
+
+    <!--Header-->
     <header class="header">
         <a href="#home" class="logo">
             Shahzaib <span>Durrani</span>
@@ -25,13 +27,14 @@
         </nav>  
     </header>
 
+    <!--Home-->
     <section class="home" id="home">
         <div class="home-content">
             <div>Hi, It's <span>Shahzaib</span></div>
             <h3 class="text-animation">
                 I'm a <span></span>
             </h3>
-            <p>Welcome to my portfolio! I am a dedicated and enthusiastic student with a grip on both <span>frontend</span> and <span>backend development</span>. I possess advanced skills in <span>PowerPoint</span> and a range of soft skills that enable me to <span>communicate effectively and collaborate with teams</span>. I'm passionate about continuous learning and am eager to take on new challenges.</p>
+            <p>Welcome to my portfolio! I am a dedicated and enthusiastic student with a grip on both <span>Frontend development</span> and <span>WebDesign</span>. I possess advanced skills in <span>PowerPoint</span> and a range of soft skills that enable me to <span>communicate effectively and collaborate with teams</span>. I'm passionate about continuous learning and am eager to take on new challenges.</p>
             <div class="social-icons">
                 <a href="https://github.com/shahzaibdurranii" target="_blank">
                     <i class="bx bxl-github"></i>
@@ -52,12 +55,11 @@
         </div>
 
         <div class="home-img">
-            <img src="images/img new.jpg" alt="">
+            <img src="images/prof.JPG" alt="">
         </div>
     </section>
 
-    
-
+    <!--About Section-->
     <section class="about" id="about">
         <div class="about-img" >
             <img src="images/img new.jpg" alt="">
@@ -73,6 +75,8 @@
             <a href="#" class="btn">Read More</a>
         </div>
     </section>
+
+    <!--Services-->
     <section class="services" id="services">
         <h2 class="heading">Services</h2>
 
@@ -109,6 +113,7 @@
         </div>
     </section>
 
+    <!--Projects-->
     <section class="projects" id="projects">
         <h2 class="heading">Projects</h2>
 
@@ -142,28 +147,35 @@
         </div>
     </section>
 
+    <!-- Contact Form-->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="#">
+        <form id="contact-form">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject ">
+                    <input type="number" name="phone" placeholder="Phone Number">
+                    <input type="text" name="subject" placeholder="Subject">
                 </div>
             </div>
             <div class="input-group-2">
-                <textarea name="" id="" cols="30"
-                rows="10" placeholder="Your Message"></textarea>
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
-
             </div>
         </form>
+        
+        <!-- Alert Box -->
+        <div id="modal-overlay" class="modal-overlay hidden"></div>
+        <div id="modal-alert" class="modal-alert hidden">
+            <p id="alert-message">This is an alert message!</p>
+            <button id="alert-button" class="alert-button">OK</button>
+        </div>
     </section>
     
+    <!--footer-->
     <footer class="footer">
         <div class="social">
             <a href="https://github.com/shahzaibdurranii" target="_blank">

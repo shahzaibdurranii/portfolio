@@ -226,6 +226,7 @@ span{
     right: -8px;
     animation: cursor 0.6s infinite,typing 20s steps(15) infinite;
 }
+/*Text Animation*/
 @keyframes cursor{
     to{
         border-left: 2px solid var(--main-color);
@@ -261,6 +262,7 @@ span{
         width: calc(100% + 8px);
     }
 }
+/*About*/
 .about{
     display: flex;
     justify-content: center;
@@ -320,52 +322,34 @@ span{
     right: -8px;
     animation: cursor 0.6s infinite,typing 20s steps(15) infinite;
 }
-/*::-webkit-scrollbar{
-    width: 8px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: var(--main-color);
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-::-webkit-scrollbar-thumb:hover{
-    transform: scale(1.02);
-}
-::-webkit-scrollbar-track{
-    background-color: var(--bg-color);
-    width: 10px;
-    border-radius: 8px;
-}*/
+
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-    height: 8px; /* Height of the scrollbar */
+    width: 8px; 
+    height: 8px; 
 }
 
-/* Scrollbar Thumb */
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-color); /* Color of the scrollbar thumb */
-    border-radius: 20px; /* Rounded corners for the thumb */
-    transition: all 0.3s ease; /* Transition effect for smooth changes */
+    background-color: var(--main-color); 
+    border-radius: 20px; 
+    transition: all 0.3s ease; 
 }
 
-/* Scrollbar Thumb Hover Effect */
 ::-webkit-scrollbar-thumb:hover {
-    transform: scale(1.2); /* Slightly scales the thumb on hover */
+    transform: scale(1.2); 
     
 }
 
-/* Scrollbar Track */
 ::-webkit-scrollbar-track {
-    background-color: var(--bg-color); /* Color of the scrollbar track */
-    width: 10px; /* Width of the track */
-    border-radius: 8px; /* Rounded corners for the track */
-    transition: background-color 0.3s ease; /* Transition effect for the track color */
+    background-color: var(--bg-color); 
+    width: 10px; 
+    border-radius: 8px; 
+    transition: background-color 0.3s ease; 
 }
 
-/* Scrollbar Track Hover Effect */
+
 ::-webkit-scrollbar-track:hover {
-    background-color: lighten(var(--bg-color), 10%); /* Lightens the track color on hover */
+    background-color: lighten(var(--bg-color), 10%); 
 }
 
 .services {
@@ -598,9 +582,8 @@ span{
     }
 }
 @media(max-width:895px){
-    /*#menu-icon{
+    #menu-icon{
         display: block;
-        cursor: pointer;
     }
     .navbar{
         position: absolute;
@@ -608,36 +591,16 @@ span{
         right: 0;
         width: 50%;
         padding: 1rem 3%;
-        background: rgba(0,0,0,0.80);
+        background: #080808;
         backdrop-filter: blur(20px);
-        border-bottom-left-radius:2rem ;
+        border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
         display: none;
     }
-    .navbar .active{
+    .navbar.active{
         display: block;
-    }*/
-    #menu-icon {
-        display: block;
-        cursor: pointer;
-      }
-      .navbar {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3%;
-        background: rgba(0,0,0,0.80);
-        backdrop-filter: blur(20px);
-        border-bottom-left-radius:2rem ;
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
-        display: none; /* initial state: hidden */
-      }
-      .navbar.active {
-        display: block; /* show navbar when menu icon is clicked */
-      }
+    }
     .navbar a{
         display: block;
         font-size: 2rem;
@@ -648,6 +611,7 @@ span{
         flex-direction: column-reverse;
         margin: 5rem 4rem;
         gap: 3rem;
+
     }
     .home-content{
         display: flex;
@@ -655,7 +619,6 @@ span{
         align-items: center;
         justify-content: center;
         text-align: center;
-
     }
     .home-content h3{
         font-size: 2.6rem;
@@ -663,15 +626,15 @@ span{
     .home-content h1{
         font-size: 8rem;
         margin-top: 3rem;
-
     }
     .home-content p{
         max-width: 600px;
         margin: 0 auto;
     }
     .home-img img{
-        width:56vw;
-        margin:3rem 0 ;
+        width: 56vw;
+        margin: 3rem 0;
+
     }
     .about{
         flex-direction: column-reverse;
@@ -681,13 +644,13 @@ span{
         margin: 3rem 0;
     }
     .about img{
-        width :50vw;
+        width: 50vw;
     }
     .services h2{
         margin-bottom: 3rem;
     }
     .services-container{
-        grid-template-columns: repeaat(1,1fr);
+        grid-template-columns: repeat(1,1fr);
     }
     .projects-box{
         grid-template-columns: repeat(1,1fr);
@@ -695,20 +658,146 @@ span{
     .projects-box img{
         min-width: 42rem;
     }
-
-
-
-
-
-
-
-
-
-
-
-
+}
+    
+#menu-icon {
+    display: block;
+    cursor: pointer;
+    }
+    .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3%;
+    background: rgba(0,0,0,0.80);
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius:2rem ;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none; /* initial state: hidden */
+    }
+    .navbar.active {
+    display: block; 
+    }
+.navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: white;
+}
+.home{
+    flex-direction: column-reverse;
+    margin: 5rem 4rem;
+    gap: 3rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
+.home-content h3{
+    font-size: 2.6rem;
+}
+.home-content h1{
+    font-size: 8rem;
+    margin-top: 3rem;
+
+}
+.home-content p{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.home-img img{
+    width:56vw;
+    margin:3rem 0 ;
+}
+.about{
+    flex-direction: column-reverse;
+    padding: 10rem 9% 10rem;
+}
+.about .heading{
+    margin: 3rem 0;
+}
+.about img{
+    width :50vw;
+}
+.services h2{
+    margin-bottom: 3rem;
+}
+.services-container{
+    grid-template-columns: repeaat(1,1fr);
+}
+.projects-box{
+    grid-template-columns: repeat(1,1fr);
+}
+.projects-box img{
+    min-width: 42rem;
+}
+
+/* Alert Box */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+    display: none;
+    backdrop-filter: blur(7px);
+}
+
+.modal-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 2px solid var(--main-color);
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    z-index: 1000;
+    display: none; 
+}
+
+.modal-alert p {
+    margin: 0;
+    padding-bottom: 15px;
+    font-size: 18px;
+}
+
+.alert-button {
+    background-color: var(--main-color); 
+    color: var(--bg-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: none;
+    font-weight: bolder;
+    padding: 10px 20px;
+    border-radius:20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.alert-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 35px var(--main-color);
+                
+}
+
+.show {
+    display: block;
+}
+
 
 
 
